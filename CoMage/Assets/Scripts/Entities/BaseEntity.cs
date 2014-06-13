@@ -73,6 +73,7 @@ public class BaseEntity : IEntity {
         return _input.GetKeyBoardMovement();
     }
 
+    #region Virtual Functions
     public virtual void StartUp()
     {
 
@@ -94,6 +95,8 @@ public class BaseEntity : IEntity {
     {
         throw new System.NotImplementedException();
     }
+
+    #endregion
 
     public IHealth GetEntityHealth()
     {
