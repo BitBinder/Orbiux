@@ -4,9 +4,9 @@ using Helpers;
 
 public class PlayerInput : IInput {
 
-	private BaseEntity _entity;
+	private Entity _entity;
 
-	public PlayerInput(BaseEntity entity){
+	public PlayerInput(Entity entity){
 		this._entity = entity;
 	}
 

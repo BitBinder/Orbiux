@@ -1,16 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
+using GameManager;
 
 public class GameTest : MonoBehaviour {
-	BaseEntity test;
+	Entity test;
 	// Use this for initialization
 	void Start () {
 		test = new Player();
+       var obstacle = new Obstacle();
+        
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		test.Update();
+        foreach (Entity entity in GameManager.Globals.instance.gameEntites)
+        {
+            entity.Update();
+        }
 	}
 }

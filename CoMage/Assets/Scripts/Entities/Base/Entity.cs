@@ -2,16 +2,16 @@
 using System.Collections;
 using Helpers;
 
-public class BaseEntity : IEntity {
+public class Entity : IEntity {
 
     protected string _name;
     protected string _tag;
     protected int _priority;
     protected GameObject _prefab;
     protected GameObject _entityObject;
-    protected Rigidbody2D _rigidbody;
     protected IHealth _health;
 	protected IInput _input;
+    protected float _speed;
 
     public void SetName(string name)
     {
@@ -53,16 +53,6 @@ public class BaseEntity : IEntity {
         return _entityObject;
     }
 
-    public void SetRigidBody(Rigidbody2D rigidbody)
-    {
-        _rigidbody = rigidbody;
-    }
-
-    public Rigidbody2D GetRigidBody()
-    {
-        return _rigidbody;
-    }
-
     public void SetInput(IInput input)
     {
         _input = input;
@@ -71,6 +61,18 @@ public class BaseEntity : IEntity {
     public Tuple<float, float> GetInput()
     {
         return _input.GetKeyBoardMovement();
+    }
+
+  
+
+    public IHealth GetEntityHealth()
+    {
+        return this._health;
+    }
+
+    public void SetEntityHealth(IHealth health)
+    {
+        _health = health;
     }
 
     #region Virtual Functions
@@ -86,7 +88,7 @@ public class BaseEntity : IEntity {
 
     public virtual void Spawn(Vector2 pos)
     {
-        _entityObject = (GameObject)GameObject.Instantiate(_prefab, pos, Quaternion.identity);
+        _entityObject = (GameObject)GameObject.Instantiate(_prefab, (Vector3)pos, Quaternion.identity);
         _entityObject.transform.parent = GameObject.Find("GameEntities").transform;
         _entityObject.tag = GetTag();
     }
@@ -98,13 +100,13 @@ public class BaseEntity : IEntity {
 
     #endregion
 
-    public IHealth GetEntityHealth()
+    public float GetSpeed()
     {
-        return this._health;
+        return _speed;
     }
 
-    public void SetEntityHealth(IHealth health)
+    public void SetSpeed(float speed)
     {
-        _health = health;
+        _speed = speed;
     }
 }

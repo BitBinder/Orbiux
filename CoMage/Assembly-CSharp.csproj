@@ -46,7 +46,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Entities\BaseEntity.cs" />
+     <Compile Include="Assets\Scripts\Entities\Active\Player.cs" />
+     <Compile Include="Assets\Scripts\Entities\Base\Entity.cs" />
      <Compile Include="Assets\Scripts\Entities\GameTest.cs" />
      <Compile Include="Assets\Scripts\Entities\Health.cs" />
      <Compile Include="Assets\Scripts\Entities\Interface\IEntity.cs" />
@@ -54,8 +55,9 @@
      <Compile Include="Assets\Scripts\Entities\Interface\IInput.cs" />
      <Compile Include="Assets\Scripts\Entities\Interface\IStats.cs" />
      <Compile Include="Assets\Scripts\Entities\PlayerInput.cs" />
+     <Compile Include="Assets\Scripts\Entities\Static\Obstacle.cs" />
      <Compile Include="Assets\Scripts\Entities\Stats.cs" />
-     <Compile Include="Assets\Scripts\Entities\Test.cs" />
+     <Compile Include="Assets\Scripts\GameManager\Globals.cs" />
      <Compile Include="Assets\Scripts\GameManager\PrefabManager.cs" />
      <Compile Include="Assets\Scripts\Helper\Tuple.cs" />
   </ItemGroup>

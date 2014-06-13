@@ -3,6 +3,8 @@ using System.Collections;
 using Helpers;
 
 public interface IEntity {
+    float GetSpeed();
+    void SetSpeed(float speed);
     string GetName();
     void SetName(string name);
 	string GetTag();
@@ -12,8 +14,7 @@ public interface IEntity {
 	int GetPriority();
 	void SetGamePrefab(GameObject prefab);
     GameObject GetGamePrefab();
-	void SetRigidBody(Rigidbody2D rigidbody);
-	Rigidbody2D GetRigidBody();
+	
 	void SetInput(IInput input);
 	Tuple<float,float> GetInput();
     void StartUp();

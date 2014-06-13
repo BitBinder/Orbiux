@@ -3,16 +3,16 @@ using System.Collections;
 
 public class Health : IHealth {
 	private float _health;
-    private BaseEntity _entity;
+    private Entity _entity;
 
 	#region IHealth implementation
 
-	public Health(BaseEntity entity){
+	public Health(Entity entity){
 		_health = 100f;
         _entity = entity;
 	}
 
-	public Health(float starting, BaseEntity entity){
+	public Health(float starting, Entity entity){
 		_health = starting;
         _entity = entity;
 	}
