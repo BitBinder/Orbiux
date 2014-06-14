@@ -18,6 +18,7 @@ public interface IEntity {
 	void SetInput(IInput input);
 	Tuple<float,float> GetInput();
     void StartUp();
+	void OnDeath();
 	void Update();
     void Spawn(Vector2 pos);
 	void CalculateItems(); //used for getting equipped bonuses. Will be a class in future.

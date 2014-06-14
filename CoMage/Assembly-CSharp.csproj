@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Entities\Active\Player.cs" />
      <Compile Include="Assets\Scripts\Entities\Base\Entity.cs" />
      <Compile Include="Assets\Scripts\Entities\GameTest.cs" />
      <Compile Include="Assets\Scripts\Entities\Health.cs" />
@@ -54,9 +55,13 @@
      <Compile Include="Assets\Scripts\Entities\Interface\IInput.cs" />
      <Compile Include="Assets\Scripts\Entities\Interface\IStats.cs" />
      <Compile Include="Assets\Scripts\Entities\PlayerInput.cs" />
+     <Compile Include="Assets\Scripts\Entities\Static\Obstacle.cs" />
      <Compile Include="Assets\Scripts\Entities\Stats.cs" />
+     <Compile Include="Assets\Scripts\GameManager\Globals.cs" />
      <Compile Include="Assets\Scripts\GameManager\PrefabManager.cs" />
      <Compile Include="Assets\Scripts\Helper\Tuple.cs" />
+     <Compile Include="Assets\Scripts\Spell\ISpell.cs" />
+     <Compile Include="Assets\Scripts\Spell\IStatusEffect.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

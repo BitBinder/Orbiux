@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace GameManager
 {
@@ -14,5 +15,11 @@ namespace GameManager
             instance = this;
             gameEntites = new List<Entity>();
         }
+
+		public void RemoveEntityFromList(Entity entity){
+			gameEntites.RemoveAll(i => i == entity);
+			Destroy(entity.GetGamePrefab());
+
+		}
     }
 }

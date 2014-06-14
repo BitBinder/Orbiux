@@ -27,7 +27,7 @@ public class Health : IHealth {
 		this._health -= amount;
         if (this._health <= 0)
         {
-            
+            this._entity.OnDeath();
         }
 	}
 

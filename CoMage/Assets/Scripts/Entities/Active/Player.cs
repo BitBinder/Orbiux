@@ -6,6 +6,7 @@ public class Player : Entity {
 
 	public Player(){
         SetTag("Player");
+		SetName("Player1");
         SetPriority(0);
         SetInput(new PlayerInput(this));
         SetEntityHealth(new Health(this));

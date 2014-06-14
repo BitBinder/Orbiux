@@ -14,8 +14,11 @@ public class GameTest : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        foreach (Entity entity in GameManager.Globals.instance.gameEntites)
+        foreach (Entity entity in GameManager.Globals.instance.gameEntites.ToArray())
         {
+			if (Input.GetMouseButton(0)){
+				entity.GetEntityHealth().DamageEntity(50f);
+			}
             entity.Update();
         }
 	}

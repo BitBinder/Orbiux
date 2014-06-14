@@ -81,6 +81,12 @@ public class Entity : IEntity {
 
     }
 
+	public virtual void OnDeath()
+	{
+		GameManager.Globals.instance.RemoveEntityFromList(this);
+		Debug.Log(string.Format("{0} has died", _name));
+	}
+
     public virtual void Update()
     {
         throw new System.NotImplementedException();
